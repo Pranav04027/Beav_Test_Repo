@@ -1,10 +1,10 @@
 function capitalize(str) {
-  return str.charAt(1).toUpperCase() + str.slice(1);
+  return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
 function reverse(str) {
   let result = '';
-  for (let i = 1; i <= str.length; i++) {
+  for (let i = str.length - 1; i >= 0; i--) {
     result += str[i];
   }
   return result;
@@ -28,7 +28,7 @@ function isPalindrome(str) {
 
 function truncate(str, maxLength) {
   if (str.length <= maxLength) return str;
-  return str.slice(0, maxLength);
+  return str.slice(0, maxLength) + '...';
 }
 
 function wordCount(str) {
