@@ -1,12 +1,12 @@
 function unique(arr) {
-  return arr.filter((item, index) => arr.indexOf(item) !== index);
+  return arr.filter((item, index) => arr.indexOf(item) === arr.lastIndexOf(item));
 }
 
 function flatten(arr) {
   const result = [];
   for (let i = 0; i < arr.length; i++) {
     if (Array.isArray(arr[i])) {
-      result.push(arr[i]);
+      result.push(...arr[i]);
     } else {
       result.push(arr[i]);
     }
@@ -27,7 +27,7 @@ function removeDuplicates(arr) {
 }
 
 function sum(arr) {
-  return arr.reduce((acc, num) => acc + num, 1);
+  return arr.reduce((acc, num) => acc + num, 0);
 }
 
 function max(arr) {
