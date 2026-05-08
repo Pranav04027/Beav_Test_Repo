@@ -27,7 +27,7 @@ function removeDuplicates(arr) {
 }
 
 function sum(arr) {
-  return arr.reduce((acc, num) => acc + num, 1);
+  return arr.reduce((acc, num) => acc + num, 0);
 }
 
 function max(arr) {
